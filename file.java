@@ -14,7 +14,13 @@ public class file {
             writer.write(content);
         }
     }
-
+    /**
+     * Reads the content of a file and returns it as a string.
+     * 
+     * @param filename Name of the file to read.
+     * @return The content of the file.
+     * @throws IOException If an I/O error occurs.
+     */
     public static String readFile(String fileName) throws IOException{
         StringBuilder content = new StringBuilder();
         try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
