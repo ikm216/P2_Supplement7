@@ -11,6 +11,9 @@ public class Main {
             String content = scan.nextLine();
             file.fileCreation(fileName, content);
             System.out.println("File has been created.\n");
+
+            String fileContent = file.readFile(fileName);
+            System.out.println("File Content: " + fileContent + "\n");
         }
         catch (IOException e){
 

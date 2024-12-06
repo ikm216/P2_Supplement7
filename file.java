@@ -15,4 +15,15 @@ public class file {
         }
     }
 
+    public static String readFile(String fileName) throws IOException{
+        StringBuilder content = new StringBuilder();
+        try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
+            String read;
+            while ((read = reader.readLine()) != null){
+                content.append(read).append("\n");
+            }
+        }
+        return content.toString().trim();
+    }
+
 }
