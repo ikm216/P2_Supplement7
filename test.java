@@ -12,4 +12,11 @@ public class test{
         File file = new File(testFile);
         Assert.assertTrue(file.exists());
     }
+    @Test
+    public void test_should_return_the_read_content_of_a_file() throws IOException{
+        String content = "Chicken On Me";
+        file.fileCreation(testFile, content);
+        String contentFile = file.readFile(testFile);
+        Assert.assertEquals(content, contentFile);
+    }
 }
