@@ -31,8 +31,15 @@ public class file {
         }
         return content.toString().trim();
     }
-
+     /**
+     * Appends content to an existing file.
+     * 
+     * @param filename Name of the file.
+     * @param content Content to append.
+     * @throws IOException If an I/O error occurs.
+     */
     public static void appendFile(String fileName, String content) throws IOException{
+        
         try(FileWriter writer = new FileWriter(fileName, true)){
             writer.write(content);
         }
