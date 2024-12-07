@@ -32,6 +32,10 @@ public class file {
         return content.toString().trim();
     }
 
-    public static void 
+    public static void appendFile(String fileName, String content) throws IOException{
+        try(FileWriter writer = new FileWriter(fileName, true)){
+            writer.write(content);
+        }
+    }
 
 }
