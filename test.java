@@ -25,7 +25,7 @@ public class test{
         String content1 = "Where the chicken";
         String content2 = "I ate it already";
         file.fileCreation(testFile, content1);
-        file.fileCreation(testFile, content2);
+        file.appendFile(testFile, content2);
         String contentFile = file.readFile(testFile);
         Assert.assertEquals(content1 + content2, contentFile);
     }
