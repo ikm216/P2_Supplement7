@@ -14,9 +14,16 @@ public class Main {
 
             String fileContent = file.readFile(fileName);
             System.out.println("File Content: " + fileContent + "\n");
+
+            System.out.print("Enter content to append to the file: ");
+            String content2 = scan.nextLine();
+            file.appendFile(fileName, content2);
         }
         catch (IOException e){
 
+        }
+        finally{
+            scan.close();
         }
             
 }
